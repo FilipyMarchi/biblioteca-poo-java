@@ -26,7 +26,16 @@ public class Cliente {
     }
 
     public void emprestimo(Livro livro) {
-        livrosEmprestados.add(livro.getNome());
+        if (livro.getQuantidade() > 0) {
+            livrosEmprestados.add(livro.getNome() + "(" + livro.getCodigoDoProduto() + ")");
+            livro.alterarQuantidadeEmprestimo();
+        } else if (livro.getQuantidade() == 0) {
+            System.out.println("Livro Indisponivel no momento!");
+        }
+    }
+
+    public void devolucao(Livro livro) {
+        livro.alterarQuantidadeDevolucao();
     }
 
     public void excluir() {

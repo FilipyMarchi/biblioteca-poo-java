@@ -14,5 +14,8 @@ public class LivroTest {
 
         System.out.println(cliente1);
 
+        cliente1.devolucao(livro1);
+
+        System.out.println(livro1);
     }
 }

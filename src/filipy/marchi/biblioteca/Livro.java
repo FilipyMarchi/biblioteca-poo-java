@@ -4,13 +4,13 @@ public class Livro {
     private String nome;
     private String categoria;
     private int quantidade;
-    private int codigo;
+    private int codigoDoProduto;
 
     public Livro(String nome, String categoria, int quantidade, int codigo) {
         this.nome = nome;
         this.categoria = categoria;
         this.quantidade = quantidade;
-        this.codigo = codigo;
+        this.codigoDoProduto = codigoDoProduto;
     }
 
     @Override
@@ -45,6 +45,10 @@ public class Livro {
         this.quantidade--;
     }
 
+    public void alterarQuantidadeDevolucao() {
+        this.quantidade++;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -57,7 +61,7 @@ public class Livro {
         return quantidade;
     }
 
-    public int getCodigo() {
-        return codigo;
+    public int getCodigoDoProduto() {
+        return codigoDoProduto;
     }
 }
