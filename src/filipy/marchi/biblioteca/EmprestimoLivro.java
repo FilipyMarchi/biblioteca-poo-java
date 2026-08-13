@@ -1,9 +1,13 @@
 package filipy.marchi.biblioteca;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class EmprestimoLivro {
+    private String nomeClienteEmprestimo;
+    private Date dataEmprestimo;
+
     private List livrosEmprestados = new ArrayList<>();
 
     public void emprestimo(Livro livro) {
