@@ -2,11 +2,11 @@ package filipy.marchi.biblioteca;
 
 public class Livro {
     private String nome;
-    private String categoria;
+    Categorias categoria;
     private int quantidade;
     private int codigoDoProduto;
 
-    public Livro(String nome, String categoria, int quantidade, int codigo) {
+    public Livro(String nome, Categorias categoria, int quantidade, int codigo) {
         this.nome = nome;
         this.categoria = categoria;
         this.quantidade = quantidade;
@@ -33,7 +33,7 @@ public class Livro {
         this.nome = nome;
     }
 
-    public void alterarCategoria(String categoria) {
+    public void alterarCategoria(Categorias categoria) {
         this.categoria = categoria;
     }
 
@@ -53,7 +53,7 @@ public class Livro {
         return nome;
     }
 
-    public String getCategoria() {
+    public Categorias getCategoria() {
         return categoria;
     }
 

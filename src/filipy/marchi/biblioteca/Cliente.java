@@ -7,7 +7,6 @@ public class Cliente {
     private String nome;
     private int idade;
     private String cpf;
-    private List livrosEmprestados = new ArrayList<>();
 
     public Cliente(String nome, int idade, String cpf) {
         this.nome = nome;
@@ -21,21 +20,7 @@ public class Cliente {
                 "cpf='" + cpf + '\'' +
                 ", idade=" + idade +
                 ", nome='" + nome + '\'' +
-                ", Livros='" + livrosEmprestados + '\'' +
                 '}';
-    }
-
-    public void emprestimo(Livro livro) {
-        if (livro.getQuantidade() > 0) {
-            livrosEmprestados.add(livro.getNome() + "(" + livro.getCodigoDoProduto() + ")");
-            livro.alterarQuantidadeEmprestimo();
-        } else if (livro.getQuantidade() == 0) {
-            System.out.println("Livro Indisponivel no momento!");
-        }
-    }
-
-    public void devolucao(Livro livro) {
-        livro.alterarQuantidadeDevolucao();
     }
 
     public void excluir() {
