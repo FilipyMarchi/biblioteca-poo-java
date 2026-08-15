@@ -1,7 +1,4 @@
-package filipy.marchi.biblioteca;
-
-import java.util.ArrayList;
-import java.util.List;
+package filipy.marchi.biblioteca.domain;
 
 public class Cliente {
     private String nome;

@@ -1,4 +1,6 @@
-package filipy.marchi.biblioteca;
+package filipy.marchi.biblioteca.service;
+
+import filipy.marchi.biblioteca.domain.Livro;
 
 import java.util.ArrayList;
 import java.util.Date;

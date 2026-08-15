@@ -1,27 +1,34 @@
-package filipy.marchi.biblioteca;
+package filipy.marchi.biblioteca.domain;
 
 public class Livro {
     private String nome;
     Categorias categoria;
     private int quantidade;
+    private static int Id = 1;
     private int codigoDoProduto;
+    private String sinopse;
 
-    public Livro(String nome, Categorias categoria, int quantidade, int codigo) {
+    public Livro(String nome, Categorias categoria, int quantidade) {
         this.nome = nome;
         this.categoria = categoria;
         this.quantidade = quantidade;
-        this.codigoDoProduto = codigoDoProduto;
+        this.codigoDoProduto = gerarId();
     }
 
     @Override
     public String toString() {
         return "Livro{" +
-                "nome='" + nome + '\'' +
-                ", categoria='" + categoria + '\'' +
+                "codigoDoProduto=" + codigoDoProduto +
+                ", sinopse='" + sinopse + '\'' +
                 ", quantidade=" + quantidade +
+                ", categoria=" + categoria +
+                ", nome='" + nome + '\'' +
                 '}';
     }
 
+    public int gerarId(){
+        return Id ++;
+    }
 
     public void excluir() {
         this.nome = null;
@@ -47,6 +54,14 @@ public class Livro {
 
     public void alterarQuantidadeDevolucao() {
         this.quantidade++;
+    }
+
+    public void alterarSinopse(String sinopse) {
+        this.sinopse = sinopse;
+    }
+
+    public String getSinopse() {
+        return sinopse;
     }
 
     public String getNome() {

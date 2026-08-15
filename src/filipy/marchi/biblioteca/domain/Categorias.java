@@ -1,4 +1,4 @@
-package filipy.marchi.biblioteca;
+package filipy.marchi.biblioteca.domain;
 
 public enum Categorias {
     FICCAO,
