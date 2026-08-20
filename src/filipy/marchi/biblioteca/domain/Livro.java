@@ -15,25 +15,12 @@ public class Livro {
         this.codigoDoProduto = gerarId();
     }
 
-    @Override
-    public String toString() {
-        return "Livro{" +
-                "codigoDoProduto=" + codigoDoProduto +
-                ", sinopse='" + sinopse + '\'' +
-                ", quantidade=" + quantidade +
-                ", categoria=" + categoria +
-                ", nome='" + nome + '\'' +
-                '}';
-    }
-
     public int gerarId(){
         return Id ++;
     }
 
-    public void excluir() {
-        this.nome = null;
-        this.categoria = null;
-        this.quantidade = 0;
+    public void adicionarSinopse (String sinopse){
+        this.sinopse = sinopse;
     }
 
     public void alterarNome(String nome) {
@@ -58,6 +45,10 @@ public class Livro {
 
     public void alterarSinopse(String sinopse) {
         this.sinopse = sinopse;
+    }
+
+    public void alterarCodigoDoProduto(int codigoDoProduto) {
+        this.codigoDoProduto = codigoDoProduto;
     }
 
     public String getSinopse() {

@@ -1,28 +1,17 @@
 package filipy.marchi.biblioteca.domain;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Bibliotecaria extends Pessoa{
+    private double salario;
 
-public class Cliente extends Pessoa{
-    public List livrosEmprestados = new ArrayList<>();
-
-    public Cliente(String nome, int idade, String cpf) {
+    public Bibliotecaria(String nome, int idade, String cpf, double salario) {
         super(nome, idade, cpf);
+        this.salario = salario;
     }
 
     @Override
     public String toString() {
         return super.toString() +
-                "livrosEmprestados=" + livrosEmprestados +
-                '}';
-    }
-
-    public List getLivrosEmprestados() {
-        return livrosEmprestados;
-    }
-
-    public void setLivrosEmprestados(List livrosEmprestados) {
-        this.livrosEmprestados = livrosEmprestados;
+                ", salario='" + salario + '\'' + "}";
     }
 
     @Override
@@ -53,5 +42,13 @@ public class Cliente extends Pessoa{
     @Override
     public void setCpf(String cpf) {
         super.setCpf(cpf);
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 }
